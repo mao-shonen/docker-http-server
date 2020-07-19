@@ -1,10 +1,10 @@
 FROM node:lts-alpine
 
+WORKDIR /data
+
 RUN npm install --global http-server
 
-RUN mkdir -p /public
-WORKDIR /public
-
 EXPOSE 8080
+
 CMD ["http-server"]
 
